@@ -74,7 +74,7 @@ class CategoryForm extends Component {
 
     return (
       <div className="category-form">
-        <h3>Set categories (Level is until 2)</h3>
+        <h3>Set categories (Level is until 2 or 3? not sure)</h3>
         <div className="category-selector">
           <h4>Main category</h4>
           <Select

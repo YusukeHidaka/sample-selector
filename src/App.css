@@ -32,19 +32,18 @@
   /* font-size: 100px; */
 }
 
-.ForWriter h2 {
-
-}
-
 .category-form {
   border: 1px solid gray;
   width: 80%;
   margin: auto;
 }
 
-.ForWriter h3 span {
-  border: solid 1px gray;
-  padding: 5px;
+.ForWriter h3 {
+  text-decoration: underline;
+}
+
+.ForWriter p span {
+  text-decoration: underline;
 }
 
 

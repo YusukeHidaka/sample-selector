@@ -12,7 +12,15 @@ class TagForm extends Component {
       removeSelected: true,
 			disabled: false,
 			stayOpen: false,
-			value: []
+			value: [],
+      // should replace those states with array or hash objects
+      displayAll: true,
+      displayMRT: true,
+      displayBTS: true,
+      displayStyleRoom: true,
+      displayFurniture: true,
+      displayRoom: true,
+      displayDecoration: true
     }
   }
 
@@ -20,10 +28,22 @@ class TagForm extends Component {
 		console.log('You\'ve selected:', value);
 		this.setState({ value });
 	}
+
 	toggleCheckbox (e) {
+    console.log(e.target.name);
+    console.log(e.target.checked);
+    if(e.target.name=="displayAll" && e.target.checked){
+      // Check every box
+    }
 		this.setState({
 			[e.target.name]: e.target.checked,
 		});
+	}
+
+  gotoTagsArticles (e) {
+    console.log(e);
+    // Writer can check articles of specific tag
+		window.open('https://estopolis.com/article/tag/' + e.value);
 	}
 
   render() {
@@ -34,19 +54,58 @@ class TagForm extends Component {
     return (
       <div className="tag-form">
         <h3>Add tags for article (Limit is 10 or something?)</h3>
-        <Select
-					closeOnSelect={!stayOpen}
-					disabled={disabled}
-					multi
-					onChange={this.handleSelectChange.bind(this)}
-					option={tag_options}
-					placeholder="Select your tags"
-          removeSelected={this.state.removeSelected}
-					simpleValue
-					value={value}
-				/>
 
-        <div className="checkbox-list">
+        <div className="tag_group_options">
+          <h4>Check tag group (you can filter the options of tag) <span> [pending]</span></h4>
+          <label className="checkbox">
+						<input type="checkbox" className="checkbox-control master-checkbox" name="displayAll" checked={this.state.displayAll} onChange={this.toggleCheckbox.bind(this)} />
+						<span className="checkbox-label">Display all tags</span>
+					</label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayMRT" checked={this.state.displayMRT} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display MRT group tags</span>
+          </label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayBTS" checked={this.state.displayBTS} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display BTS group tags</span>
+          </label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayStyleRoom" checked={this.state.displayStyleRoom} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display StyleRoom group tags</span>
+          </label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayFurniture" checked={this.state.displayFurniture} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display Furniture group tags</span>
+          </label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayRoom" checked={this.state.displayRoom} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display Room group tags</span>
+          </label>
+          <label className="checkbox">
+            <input type="checkbox" className="checkbox-control" name="displayDecoration" checked={this.state.displayDecoration} onChange={this.toggleCheckbox.bind(this)} />
+            <span className="checkbox-label">Display Decoration group tags</span>
+          </label>
+
+        </div>
+
+        <div className="tag-selector">
+          <hr />
+          <h4>Tag selector (main form)</h4>
+          <Select
+  					closeOnSelect={!stayOpen}
+  					disabled={disabled}
+  					multi
+  					onChange={this.handleSelectChange.bind(this)}
+  					options={tag_options}
+  					placeholder="Select your tags"
+            removeSelected={this.state.removeSelected}
+  					simpleValue
+  					value={value}
+            onValueClick={this.gotoTagsArticles}
+  				/>
+        </div>
+
+        <div className="checkbox-list options">
           <h4>Options</h4>
 					<label className="checkbox">
 						<input type="checkbox" className="checkbox-control" name="removeSelected" checked={this.state.removeSelected} onChange={this.toggleCheckbox.bind(this)} />

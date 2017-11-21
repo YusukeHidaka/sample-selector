@@ -13,6 +13,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Forms for category, tag, SEO keyword / Estopolis</h1>
+          <h2>It's made from dummy data according to <a href="https://goo.gl/xJRNst">that sheet</a>.</h2>
         </header>
         <div>
           <ForAdmin />

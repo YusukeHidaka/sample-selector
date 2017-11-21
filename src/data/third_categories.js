@@ -1,4 +1,4 @@
 exports.MRT = [
-  { value: 'ASOK', label: 'ASOK', id: 0 },
-  { value: 'RAMA9', label: 'RAMA9', id: 1 },
+  { value: 'Asok', label: 'Asok', id: 0 },
+  { value: 'Rama9', label: 'Rama9', id: 1 },
 ];

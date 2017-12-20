@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 80px;
 }
 
@@ -22,7 +22,24 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+.App-footer {
+  background-color: #222;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+
+.ForAdmin h2 {
+  /* font-size: 100px; */
+}
+
+.ForWriter h2 {
+
 }

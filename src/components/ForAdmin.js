@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 class ForAdmin extends Component {
+  state = {
+    selectedOption: '',
+  }
+
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption });
+  }
+
   render() {
     return (
       <div className="ForAdmin">

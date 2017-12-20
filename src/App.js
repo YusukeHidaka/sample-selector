@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './estopolis-logo.png';
 
 import './App.css';
-import ForAdmin from './components/for_admin';
-import ForWriter from './components/for_writer';
+import 'react-select/dist/react-select.css';
+import ForAdmin from './components/ForAdmin';
+import ForWriter from './components/ForWriter';
 
 class App extends Component {
   render() {

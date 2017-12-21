@@ -23,6 +23,7 @@ class CategoryForm extends Component {
 
   render() {
     let maincatValue = _.get(this.state, 'mainSelectedOption.value');
+    let subcatValue = _.get(this.state, 'subSelectedOption.value');
     const mainOptions = MAIN_CATEGORIES;
     let subOptions = SUB_CATEGORIES[maincatValue];
 
@@ -31,8 +32,18 @@ class CategoryForm extends Component {
       subcatPlaceholder = 'Select ...';
     }
 
+    let url = '';
+    if(!maincatValue){
+      url = 'Choose main category / Choose sub category /';
+    } else if (!subcatValue) {
+      url = maincatValue + ' / Choose sub category /';
+    } else {
+      url = maincatValue + ' / ' + subcatValue + ' /'
+    }
+
     return (
       <div className="category-form">
+        <h3>Set categories (Level is until 2)</h3>
         <div className="category-selector">
           <h4>Main category</h4>
           <Select
@@ -51,6 +62,7 @@ class CategoryForm extends Component {
           />
           <h4>3rd category(if it exsists)</h4>
         </div>
+        <h3>URL is gonna be: <span>/ article / {url} article_title</span></h3>
       </div>
     );
   }

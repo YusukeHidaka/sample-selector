@@ -16,6 +16,7 @@ class App extends Component {
         </header>
         <div>
           <ForAdmin />
+          <hr />
           <ForWriter />
         </div>
         <footer className="App-footer">

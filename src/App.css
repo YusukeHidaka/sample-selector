@@ -35,3 +35,20 @@
 .ForWriter h2 {
 
 }
+
+.category-form {
+  border: 1px solid gray;
+  width: 80%;
+  margin: auto;
+}
+
+.ForWriter h3 span {
+  border: solid 1px gray;
+  padding: 5px;
+}
+
+
+.Select {
+  width: 50%;
+  margin: auto;
+}

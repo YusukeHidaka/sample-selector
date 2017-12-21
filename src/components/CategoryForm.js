@@ -93,7 +93,7 @@ class CategoryForm extends Component {
             placeholder={subcatPlaceholder}
             disabled={subAbled}
           />
-          <h4>third category(if it exsists)</h4>
+          <h4>third category(if it exsists. For now, only area/mrt has third categories.)</h4>
           <Select
             name="third-cat-selector"
             value={_.get(this.state, 'thirdSelectedOption.value', '')}

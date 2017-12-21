@@ -60,6 +60,7 @@ class CategoryForm extends Component {
     }
 
     // Render urls according to selected options
+    // For now, only area/mrt has third categories.
     let url = '';
     if(!maincatValue){
       url = '{ Choose main category } / { Choose sub category } / { Choose third category } /';

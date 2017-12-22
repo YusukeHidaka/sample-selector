@@ -18,8 +18,16 @@ class CategoryForm extends Component {
       thirdSelectedOption: null
     }
   }
-  onChangeMain = (mainSelectedOption) => {
-    this.setState({ mainSelectedOption });
+
+  onClickMain = (event) => {
+    // When same category is already selected...
+    if (this.state.selectedItem == event.currentTarget.dataset.id) {
+      this.setState({ selectedItem: null });
+      this.setState({ mainSelectedOption: null});
+    } else {
+      this.setState({ selectedItem: event.currentTarget.dataset.id });
+      this.setState({ mainSelectedOption: MAIN_CATEGORIES[event.currentTarget.dataset.id] });
+    }
     this.setState({ subSelectedOption: null });
     this.setState({ thirdSelectedOption: null });
   }
@@ -31,11 +39,6 @@ class CategoryForm extends Component {
 
   onChangeThird = (thirdSelectedOption) => {
     this.setState({ thirdSelectedOption });
-  }
-
-  onItemClick = (event) => {
-    console.log(this.state.selectedItem);
-    this.setState({ selectedItem: event.currentTarget.dataset.id });
   }
 
   render() {
@@ -89,7 +92,7 @@ class CategoryForm extends Component {
     for(var k in data){
       category_list.push(
         <li
-          onClick={this.onItemClick}
+          onClick={this.onClickMain}
           data-id={k}
           className={this.state.selectedItem == k ? "selected-main-cat" : ""}
         >
@@ -104,20 +107,14 @@ class CategoryForm extends Component {
 
     return (
       <div className="category-form form-group">
-        <div className="category">
-          <ul className="category-list">
-            {category_list}
-          </ul>
-        </div>
         <h3>Set categories (Level is until 2 or 3? not sure)</h3>
         <div className="category-selector">
           <h4>Main category</h4>
-          <Select
-            name="main-cat-selector"
-            value={_.get(this.state, 'mainSelectedOption.value', '')}
-            onChange={this.onChangeMain}
-            options={mainOptions}
-          />
+          <div className="category">
+            <ul className="category-list">
+              {category_list}
+            </ul>
+          </div>
           <h4>Sub category</h4>
           <Select
             name="sub-cat-selector"

@@ -91,7 +91,7 @@ class CategoryForm extends Component {
         <li
           onClick={this.onItemClick}
           data-id={k}
-          className={this.state.selectedItem == k ? "on" : "off"}
+          className={this.state.selectedItem == k ? "selected-main-cat" : ""}
         >
           <FontAwesome
             name={data[k].icon}

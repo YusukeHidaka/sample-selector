@@ -17,10 +17,13 @@ class CategoryForm extends Component {
   }
   onChangeMain = (mainSelectedOption) => {
     this.setState({ mainSelectedOption });
+    this.setState({ subSelectedOption: null });
+    this.setState({ thirdSelectedOption: null });
   }
 
   onChangeSub = (subSelectedOption) => {
     this.setState({ subSelectedOption });
+    this.setState({ thirdSelectedOption: null });
   }
 
   onChangeThird = (thirdSelectedOption) => {
@@ -71,7 +74,6 @@ class CategoryForm extends Component {
     } else {
       url = maincatValue + ' / ' + subcatValue + ' /'
     }
-
 
     return (
       <div className="category-form">

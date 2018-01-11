@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.App-header h1 {
+  font-size: 50px;
+}
+
+.App-header a {
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+
+.ForAdmin h2 {
+  /* font-size: 100px; */
+}
+
+
+.ForWriter h3 {
+  text-decoration: underline;
+}
+
+.ForWriter p span {
+  text-decoration: underline;
+}
+
+
+.Select {
+  width: 50%;
+  margin: auto;
+}
+
+/* For categoryform */
+.category-form {
+  border: 1px solid gray;
+  width: 80%;
+  margin: auto;
+}
+
+/* For tagform */
+.tag-form {
+  border: 1px solid gray;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.checkbox {
+  display: block;
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.checkbox-list {
+  margin-top: 30px;
+}
+
+.checkbox-list h4 {
+  margin: 0;
+}
+
+.tag_group_options {
+  border: 1px solid gray;
+  width: 50%;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+.tag_group_options h4 span {
+  color: red;
+}
+
+.master-checkbox {
+  margin-bottom: 10px;
+}

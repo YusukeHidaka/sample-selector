@@ -5,7 +5,7 @@ import TagForm from './TagForm.js';
 class ForWriter extends Component {
   render() {
     return (
-      <div className="ForWriter">
+      <div className="for-writer">
         <h2>These forms are for Writing page</h2>
         <CategoryForm />
         <TagForm />

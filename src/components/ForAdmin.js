@@ -12,7 +12,7 @@ class ForAdmin extends Component {
 
   render() {
     return (
-      <div className="ForAdmin">
+      <div className="for-admin">
         <h2>These forms are for Admin page</h2>
         <CategoryAdminForm />
       </div>

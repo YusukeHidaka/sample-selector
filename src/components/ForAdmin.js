@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CategoryAdminForm from './CategoryAdminForm.js';
 
 class ForAdmin extends Component {
   state = {
@@ -13,6 +14,7 @@ class ForAdmin extends Component {
     return (
       <div className="ForAdmin">
         <h2>These forms are for Admin page</h2>
+        <CategoryAdminForm />
       </div>
     );
   }

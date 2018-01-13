@@ -5,6 +5,8 @@ import Select from 'react-select';
 const MAIN_CATEGORIES = require('../data/main_categories');
 const SUB_CATEGORIES = require('../data/sub_categories');
 const THIRD_CATEGORIES = require('../data/third_categories');
+const FontAwesome = require('react-fontawesome');
+
 
 class CategoryForm extends Component {
   constructor (props){
@@ -75,8 +77,28 @@ class CategoryForm extends Component {
       url = maincatValue + ' / ' + subcatValue + ' /'
     }
 
+    let category_list = [];
+    const data = MAIN_CATEGORIES;
+
+    for(var k in data){
+      category_list.push(
+        <li>
+          <FontAwesome
+            name={data[k].icon}
+            size='2x'
+          />
+          <br/>{data[k].value}
+        </li>
+      );
+    }
+
     return (
-      <div className="category-form">
+      <div className="category-form form-group">
+        <div className="category">
+          <ul className="category-list">
+            {category_list}
+          </ul>
+        </div>
         <h3>Set categories (Level is until 2 or 3? not sure)</h3>
         <div className="category-selector">
           <h4>Main category</h4>

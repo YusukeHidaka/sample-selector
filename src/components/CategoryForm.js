@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import _ from 'lodash';
 import Select from 'react-select';
+import $ from 'jquery';
 
 const MAIN_CATEGORIES = require('../data/main_categories');
 const SUB_CATEGORIES = require('../data/sub_categories');
@@ -30,6 +31,11 @@ class CategoryForm extends Component {
 
   onChangeThird = (thirdSelectedOption) => {
     this.setState({ thirdSelectedOption });
+  }
+
+  onItemClick = (event) => {
+    console.log(this.state.selectedItem);
+    this.setState({ selectedItem: event.currentTarget.dataset.id });
   }
 
   render() {
@@ -82,7 +88,11 @@ class CategoryForm extends Component {
 
     for(var k in data){
       category_list.push(
-        <li>
+        <li
+          onClick={this.onItemClick}
+          data-id={k}
+          className={this.state.selectedItem == k ? "on" : "off"}
+        >
           <FontAwesome
             name={data[k].icon}
             size='2x'

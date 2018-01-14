@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://YusukeHidaka.github.io/sample-selector",
   "dependencies": {
+    "jquery": "^3.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-fontawesome": "^1.6.1",

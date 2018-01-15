@@ -9,3 +9,5 @@ module.exports = [
 	{ value: 'News', label: 'News', id: 7, icon: 'bullhorn'},
 	{ value: 'Guide', label: 'Guide', id: 8, icon: 'hand-o-left'},
 ];
+
+// icon is named from http://fontawesome.io/icons/

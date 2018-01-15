@@ -16,9 +16,9 @@ class App extends Component {
           <h2>It's made from dummy data according to <a href="https://goo.gl/xJRNst">that sheet</a>.</h2>
         </header>
         <div>
-          <ForAdmin />
-          <hr />
           <ForWriter />
+          <hr />
+          <ForAdmin />
         </div>
         <footer className="App-footer">
         </footer>

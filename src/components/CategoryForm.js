@@ -47,27 +47,44 @@ class CategoryForm extends Component {
     let subcatValue = _.get(this.state, 'subSelectedOption.value');
     let thirdcatValue = _.get(this.state, 'thirdSelectedOption.value');
 
-    // Set options for selector
-    const mainOptions = MAIN_CATEGORIES;
+    // Set oprions for main category
+    let main_categories = [];
+    for(var k in MAIN_CATEGORIES){
+      main_categories.push(
+        <li
+          onClick={this.onClickMain}
+          data-id={k}
+          className={this.state.selectedItem == k ? "selected-main-cat" : ""}
+        >
+          <FontAwesome
+            name={MAIN_CATEGORIES[k].icon}
+            size='2x'
+          />
+          <br/>{MAIN_CATEGORIES[k].value}
+        </li>
+      );
+    }
+
+    // Set options for sub, third selector
     let subOptions = SUB_CATEGORIES[maincatValue];
     let thirdOptions = THIRD_CATEGORIES[subcatValue];
 
     // Define abled args
-    let subAbled = true;
-    let thirdAbled = true;
+    let subDisabled = true;
+    let thirdDisabled = true;
 
     // Handle placeholder depending on parent category
     let subcatPlaceholder='Choose main category first';
     if(maincatValue){
       subcatPlaceholder = 'Select ...';
-      subAbled = false;
+      subDisabled = false;
     }
 
     let thirdcatPlaceholder='Choose sub category';
     if(subcatValue){
       if (thirdOptions) {
         thirdcatPlaceholder = 'Select ...';
-        thirdAbled = false;
+        thirdDisabled = false;
       } else {
         thirdcatPlaceholder = "This subcategory doesn't have 3rd category";
       }
@@ -86,25 +103,6 @@ class CategoryForm extends Component {
       url = maincatValue + ' / ' + subcatValue + ' /'
     }
 
-    let category_list = [];
-    const data = MAIN_CATEGORIES;
-
-    for(var k in data){
-      category_list.push(
-        <li
-          onClick={this.onClickMain}
-          data-id={k}
-          className={this.state.selectedItem == k ? "selected-main-cat" : ""}
-        >
-          <FontAwesome
-            name={data[k].icon}
-            size='2x'
-          />
-          <br/>{data[k].value}
-        </li>
-      );
-    }
-
     return (
       <div className="category-form form-group">
         <h3>Set categories (Level is until 2 or 3? not sure)</h3>
@@ -112,7 +110,7 @@ class CategoryForm extends Component {
           <h4>Main category</h4>
           <div className="category">
             <ul className="category-list">
-              {category_list}
+              {main_categories}
             </ul>
           </div>
           <h4>Sub category</h4>
@@ -122,7 +120,7 @@ class CategoryForm extends Component {
             onChange={this.onChangeSub}
             options={subOptions}
             placeholder={subcatPlaceholder}
-            disabled={subAbled}
+            disabled={subDisabled}
           />
           <h4>third category(if it exsists. For now, only area/mrt has third categories.)</h4>
           <Select
@@ -131,7 +129,7 @@ class CategoryForm extends Component {
             onChange={this.onChangeThird}
             options={thirdOptions}
             placeholder={thirdcatPlaceholder}
-            disabled={thirdAbled}
+            disabled={thirdDisabled}
           />
         </div>
         <p>URL : <span>https://www.estopolis.com / article / {url} article_title</span></p>

@@ -1,3 +1,7 @@
+## how to develop
+`$ npm start`
+- compile scss to css and watch source code.
+
 
 ## how to deploy [my git io](https://yusukehidaka.github.io/sample-selector/)
 `$ npm run deploy`

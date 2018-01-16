@@ -2,12 +2,11 @@ import React, { Component }  from 'react';
 import _ from 'lodash';
 import Select from 'react-select';
 import $ from 'jquery';
+import MainCategoryForm from './MainCategoryForm.js';
 
 const MAIN_CATEGORIES = require('../data/main_categories');
 const SUB_CATEGORIES = require('../data/sub_categories');
 const THIRD_CATEGORIES = require('../data/third_categories');
-const FontAwesome = require('react-fontawesome');
-
 
 class CategoryForm extends Component {
   constructor (props){
@@ -46,24 +45,6 @@ class CategoryForm extends Component {
     let maincatValue = _.get(this.state, 'mainSelectedOption.value');
     let subcatValue = _.get(this.state, 'subSelectedOption.value');
     let thirdcatValue = _.get(this.state, 'thirdSelectedOption.value');
-
-    // Set oprions for main category
-    let main_categories = [];
-    for(var k in MAIN_CATEGORIES){
-      main_categories.push(
-        <li
-          onClick={this.onClickMain}
-          data-id={k}
-          className={this.state.selectedItem == k ? "selected-main-cat" : ""}
-        >
-          <FontAwesome
-            name={MAIN_CATEGORIES[k].icon}
-            size='2x'
-          />
-          <br/>{MAIN_CATEGORIES[k].value}
-        </li>
-      );
-    }
 
     // Set options for sub, third selector
     let subOptions = SUB_CATEGORIES[maincatValue];
@@ -107,12 +88,11 @@ class CategoryForm extends Component {
       <div className="category-form form-group">
         <h3>Set categories (Level is until 2 or 3? not sure)</h3>
         <div className="category-selector">
-          <h4>Main category</h4>
-          <div className="category">
-            <ul className="category-list">
-              {main_categories}
-            </ul>
-          </div>
+          <MainCategoryForm
+            selectedItem={this.state.selectedItem}
+            onClickMain={this.onClickMain.bind(this)}
+            MAIN_CATEGORIES={MAIN_CATEGORIES}
+          />
           <h4>Sub category</h4>
           <Select
             name="sub-cat-selector"

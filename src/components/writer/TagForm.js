@@ -2,8 +2,8 @@ import React, { Component }  from 'react';
 import _ from 'lodash';
 import Select from 'react-select';
 
-const TAG_GROUPS = require('../data/tag_groups');
-const TAGS = require('../data/tags');
+const TAG_GROUPS = require('../../data/tag_groups');
+const TAGS = require('../../data/tags');
 
 class TagForm extends Component {
   constructor (props){

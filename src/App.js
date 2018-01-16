@@ -3,8 +3,8 @@ import logo from './estopolis-logo.png';
 
 import './App.css';
 import 'react-select/dist/react-select.css';
-import ForAdmin from './components/ForAdmin';
-import ForWriter from './components/ForWriter';
+import ForAdmin from './components/admin/ForAdmin';
+import ForWriter from './components/writer/ForWriter';
 
 class App extends Component {
   render() {

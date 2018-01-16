@@ -4,9 +4,9 @@ import Select from 'react-select';
 import $ from 'jquery';
 import MainCategoryForm from './MainCategoryForm.js';
 
-const MAIN_CATEGORIES = require('../data/main_categories');
-const SUB_CATEGORIES = require('../data/sub_categories');
-const THIRD_CATEGORIES = require('../data/third_categories');
+const MAIN_CATEGORIES = require('../../data/main_categories');
+const SUB_CATEGORIES = require('../../data/sub_categories');
+const THIRD_CATEGORIES = require('../../data/third_categories');
 
 class CategoryForm extends Component {
   constructor (props){

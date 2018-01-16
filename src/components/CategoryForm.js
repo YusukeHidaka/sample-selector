@@ -57,7 +57,7 @@ class CategoryForm extends Component {
     // Handle placeholder depending on parent category
     let subcatPlaceholder='Choose main category first';
     if(maincatValue){
-      subcatPlaceholder = 'Select ...';
+      subcatPlaceholder = 'Select ' + maincatValue + '\'s sub category...';
       subDisabled = false;
     }
 

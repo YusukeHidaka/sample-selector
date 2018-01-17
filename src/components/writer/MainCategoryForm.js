@@ -14,16 +14,14 @@ class MainCategoryForm extends Component {
     // Set oprions for main category
     let main_categories = [];
     for(var k in MAIN_CATEGORIES){
+      let icon_path = '../../icons/'+ MAIN_CATEGORIES[k].icon + '.svg';
       main_categories.push(
         <li
           onClick={this.props.onClickMain}
           data-id={k}
           className={this.props.selectedItem == k ? "selected-main-cat" : "non-selected-main-cat"}
         >
-          <FontAwesome
-            name={MAIN_CATEGORIES[k].icon}
-            size='2x'
-          />
+          <img src={icon_path} width="32" height="32"/>
           <br/>{MAIN_CATEGORIES[k].value}
         </li>
       );

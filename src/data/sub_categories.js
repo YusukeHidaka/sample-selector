@@ -1,61 +1,60 @@
-exports.Investment = [
-	{ value: 'Rent', label: 'Rent', id: 0 },
-	{ value: 'Buy', label: 'Buy', id: 1 },
-	{ value: 'Sell', label: 'Sell', id: 2 },
+exports.ลงทุนคอนโด = [
+	{ value: 'ลงทุนซื้อคอนโด', label: 'ลงทุนซื้อคอนโด', id: 0 },
+	{ value: 'สินเชื่อและการเงิน', label: 'สินเชื่อและการเงิน', id: 1 },
+	{ value: 'ลงทุนขายคอนโด', label: 'ลงทุนขายคอนโด', id: 2 },
 ];
 
-exports.Money = [
-	{ value: 'Finace', label: 'Finace', id: 0 },
-	{ value: 'Credit', label: 'Credit', id: 1 },
+exports.สินเชื่อและการเงิน = [
+	{ value: 'วางแผนการเงิน', label: 'วางแผนการเงิน', id: 0 },
+	{ value: 'สินเชื่อคอนโด', label: 'สินเชื่อคอนโด', id: 1 },
 ];
 
-exports.Repairing = [
-	{ value: 'Reform', label: 'Reform', id: 0 },
-	{ value: 'Renovation', label: 'Renovation', id: 1 },
+exports.เคล็ดลับการดูแลคอนโด = [
+	{ value: 'เทคนิคจากช่างซ่อม', label: 'เทคนิคจากช่างซ่อม', id: 0 },
+	{ value: 'รีโนเวทคอนโด', label: 'รีโนเวทคอนโด', id: 1 },
 ];
 
-exports.Area = [
-	{ value: 'BTS', label: 'BTS', id: 0 },
-	{ value: 'MRT', label: 'MRT', id: 1 },
-	{ value: 'SurveyLocation', label: 'Survey Location', id: 2 },
-	{ value: 'AirportLink', label: 'Airport Link', id: 3 },
+exports.รอบรั้วคอนโด = [
+	{ value: 'คอนโดติด BTS', label: 'คอนโดติด BTS', id: 0 },
+	{ value: 'คอนโดติด MRT', label: 'คอนโดติด MRT', id: 1 },
+	{ value: 'คอนโดทำเลทอง', label: 'คอนโดทำเลทอง', id: 2 },
+	{ value: 'คอนโดติดแอร์พอร์ตลิงค์', label: 'คอนโดติดแอร์พอร์ตลิงค์', id: 3 },
 ];
 
-exports.LivingTips = [
-	{ value: 'Cleaning', label: 'Cleaning', id: 0 },
-	{ value: 'Cooking', label: 'Cooking', id: 1 },
-	{ value: 'Health', label: 'Health', id: 2 },
-	{ value: 'Law', label: 'Law', id: 3 },
-	{ value: 'Solving', label: 'Solving', id: 4 },
+exports.คู่มืออยู่คอนโด = [
+	{ value: 'ทำความสะอาดคอนโด', label: 'ทำความสะอาดคอนโด', id: 0 },
+	{ value: 'ทําอาหารในคอนโด', label: 'ทําอาหารในคอนโด', id: 1 },
+	{ value: 'เกร็ดความรู้สุขภาพ', label: 'เกร็ดความรู้สุขภาพ', id: 2 },
+	{ value: 'กฎหมายคอนโด', label: 'กฎหมายคอนโด', id: 3 },
+	{ value: 'ปัญหาคอนโด', label: 'ปัญหาคอนโด', id: 4 },
 ];
 
-exports.LifeStyle = [
-	{ value: 'Shopping', label: 'Shopping', id: 0 },
-	{ value: 'Travel', label: 'Travel', id: 1 },
-	{ value: 'Innovation', label: 'Innovation', id: 2 },
-	{ value: 'Hangout', label: 'Hangout', id: 3 },
+exports.ไลฟ์สไตล์ = [
+	{ value: 'ท่องเที่ยว', label: 'ท่องเที่ยว', id: 0 },
+	{ value: 'แหล่งช็อปปิ้ง', label: 'นวัตกรรมที่น่าสนใจ', id: 1 },
+	{ value: 'ร้านน่านั่ง', label: 'ร้านน่านั่ง', id: 2 },
+	{ value: 'ร้านน่านั่ง', label: 'ร้านน่านั่ง', id: 3 },
 ];
 
-exports.Decoration = [
-	{ value: 'Materials', label: 'Materials', id: 0 },
-	{ value: 'Furniture', label: 'Furniture', id: 1 },
-	{ value: 'Ideas', label: 'Ideas', id: 2 },
-	{ value: 'DIY', label: 'DIY', id: 3 },
-	{ value: 'Interior', label: 'Interior', id: 4 },
-	{ value: 'FengShui', label: 'Feng Shui', id: 5 },
+exports.ตกแต่งคอนโด = [
+	{ value: 'วัสดุและอุปกรณ์', label: 'วัสดุและอุปกรณ์', id: 0 },
+	{ value: 'เฟอร์นิเจอร์', label: 'เฟอร์นิเจอร์', id: 1 },
+	{ value: 'ไอเดียแต่งคอนโด', label: 'ไอเดียแต่งคอนโด', id: 2 },
+	{ value: 'ดี.ไอ.วาย ', label: 'ดี.ไอ.วาย ', id: 3 },
+	{ value: 'ฮวงจุ้ย', label: 'ฮวงจุ้ย', id: 4 },
+	{ value: 'ตกแต่งภายในคอนโด', label: 'ตกแต่งภายในคอนโด', id: 5 },
 ];
 
-exports.News = [
-	{ value: 'Promotion', label: 'Promotion', id: 0 },
-	{ value: 'Traffic', label: 'Traffic', id: 1 },
-	{ value: 'EventCondo', label: 'Event Condo', id: 2 },
-	{ value: 'RealEstate', label: 'Real Estate', id: 3 },
+exports.ข่าวสารคอนโด = [
+	{ value: 'โปรโมชั่นคอนโด', label: 'โปรโมชั่นคอนโด', id: 0 },
+	{ value: 'รถไฟฟ้าและจราจร', label: 'รถไฟฟ้าและจราจร', id: 1 },
+	{ value: 'คอนโดใหม่', label: 'คอนโดใหม่', id: 2 },
+	{ value: 'ข่าวอสังหาริมทรัพย์', label: 'ข่าวอสังหาริมทรัพย์', id: 3 },
 ];
 
-exports.Guide = [
-	{ value: 'Sell', label: 'Sell', id: 0 },
-	{ value: 'Rent', label: 'Rent', id: 1 },
-	{ value: 'Invest', label: 'Invest', id: 2 },
-	{ value: 'Renovation', label: 'Renovation', id: 3 },
-	{ value: 'Buy', label: 'Buy', id: 4 },
+exports.คู่มือชาวคอนโด = [
+	{ value: 'เลือกซื้อคอนโด', label: 'เลือกซื้อคอนโด', id: 0 },
+	{ value: 'เลือกเช่าคอนโด', label: 'เลือกเช่าคอนโด', id: 1 },
+	{ value: 'เลือกลงทุนคอนโด', label: 'เลือกลงทุนคอนโด', id: 2 },
+	{ value: 'เลือกขายคอนโด', label: 'เลือกขายคอนโด', id: 3 },
 ];

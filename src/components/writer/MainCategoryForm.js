@@ -10,7 +10,7 @@ class MainCategoryForm extends Component {
 
   render() {
     const MAIN_CATEGORIES = this.props.MAIN_CATEGORIES;
-    
+
     // Set oprions for main category
     let main_categories = [];
     for(var k in MAIN_CATEGORIES){
@@ -18,7 +18,7 @@ class MainCategoryForm extends Component {
         <li
           onClick={this.props.onClickMain}
           data-id={k}
-          className={this.props.selectedItem == k ? "selected-main-cat" : ""}
+          className={this.props.selectedItem == k ? "selected-main-cat" : "non-selected-main-cat"}
         >
           <FontAwesome
             name={MAIN_CATEGORIES[k].icon}

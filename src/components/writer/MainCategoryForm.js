@@ -14,6 +14,7 @@ class MainCategoryForm extends Component {
     // Set oprions for main category
     let main_categories = [];
     for(var k in MAIN_CATEGORIES){
+      // it's not shown in page.
       let icon_path = '../../icons/'+ MAIN_CATEGORIES[k].icon + '.svg';
       main_categories.push(
         <li

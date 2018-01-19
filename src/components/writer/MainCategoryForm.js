@@ -1,8 +1,6 @@
 import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 
-const FontAwesome = require('react-fontawesome');
-
 class MainCategoryForm extends Component {
   constructor (props){
     super(props);
